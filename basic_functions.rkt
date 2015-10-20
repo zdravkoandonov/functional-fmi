@@ -76,3 +76,10 @@
         (fib_iter b (+ a b) (+ i 1))
         a))
   (fib_iter 0 1 0))
+
+(define (pal_cnt_in_interval a b)
+  (define (pal_cnt_int_interval_iter i cnt)
+    (if (<= i b)
+        (pal_cnt_int_interval_iter (+ i 1) (+ cnt (if (is_pal i) 1 0)))
+        cnt))
+  (pal_cnt_int_interval_iter a 0))
