@@ -55,4 +55,17 @@
 
 (define (to_bin n)
   (reverse (to_bin_rev n)))
-      
+
+(define (is_pal n)
+  (= n (reverse n)))
+
+(define (contains_pal_at_front n)
+  (and (> (digit_cnt n) 1) (or (is_pal n) (contains_pal_at_front (div n 10)))))
+
+(define (contains_pal n)
+  (and (> (digit_cnt n) 1) (or (contains_pal_at_front n) (contains_pal (reverse (div (reverse n) 10))))))
+
+(define (gcd a b)
+  (if (= b 0)
+      a
+      (gcd b (remainder a b))))
