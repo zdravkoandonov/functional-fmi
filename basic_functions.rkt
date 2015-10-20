@@ -69,3 +69,10 @@
   (if (= b 0)
       a
       (gcd b (remainder a b))))
+
+(define (fibn n)
+  (define (fib_iter a b i)
+    (if (< i n)
+        (fib_iter b (+ a b) (+ i 1))
+        a))
+  (fib_iter 0 1 0))
