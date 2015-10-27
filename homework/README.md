@@ -67,7 +67,7 @@ With that in mind, give implementation to the following functions to work with f
   (void))
 
 ; You should subtract two fractions together and return a new fraction
-(define (substract-frac frac1 frac2)
+(define (subtract-frac frac1 frac2)
   (void))
 
 ; You know the drill by now. Multiply and return a new fraction
